@@ -2,9 +2,13 @@
  * @format
  */
 
-import {AppRegistry} from 'react-native';
-// import App from './App';
-import screens from './src/screens'
-import {name as appName} from './app.json';
+import { AppRegistry } from 'react-native'
+import App from './App'
+import { name as appName } from './app.json'
 
-AppRegistry.registerComponent(appName, () => screens.ProductScreen);
+if (__DEV__) {
+  import('./src/configs/ReactotronConfig')
+}
+
+
+AppRegistry.registerComponent(appName, () => App)

@@ -1,8 +1,9 @@
-import ProductScreen from './product';
-import ProductDetailScreen from './productdetail';
+import ProductScreen from './product'
+import ProductDetailScreen from './productdetail'
+import HOC from './HOC'
 
 const screens = {
-  ProductScreen,
+  ProductScreen: HOC(ProductScreen),
   ProductDetailScreen,
-};
-export default screens;
+}
+export default screens
